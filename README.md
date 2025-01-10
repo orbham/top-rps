@@ -1,5 +1,3 @@
-Rock Paper Scissors: JavaScript project for The Odin Project (current console only).
+Little Rock Paper Scissor game through the Odin Project.
 
-took awhile to get here lol
 
-shoula have used commits more throughout but first real project
