@@ -1,0 +1,240 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s; 
+  }
+  
+  body.light {
+    background-color: #f8f9fa;
+    color: #343a40;
+  }
+  
+  body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-shadow: 2px 2px 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  body.dark h1 {
+    color: #4e8ef7;
+  }
+  
+  .score-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .score-container strong {
+    font-weight: bold;
+  }
+  
+  .score {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .options-container {
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  body.dark h2 {
+    color: #e0e0e0;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .btn {
+    width: 130px;
+    height: 130px;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #28a745;
+    border: 2px solid #28a745;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  body.dark .btn {
+    background-color: #3a3a3a;
+    border-color: #3a3a3a;
+  }
+  
+  body.dark .btn:hover {
+    background-color: #4a4a4a;
+  }
+  
+  .btn:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+  }
+  
+  .btn:active {
+    transform: scale(1.05);
+  }
+  
+  #rock-btn::before {
+    content: "🪨";
+    font-size: 2.5rem;
+    display: block;
+  }
+  
+  #paper-btn::before {
+    content: "📄";
+    font-size: 2.5rem;
+    display: block;
+  }
+  
+  #scissors-btn::before {
+    content: "✂️";
+    font-size: 2.5rem;
+    display: block;
+  }
+  
+  .results-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+  }
+  
+  #results-msg {
+    font-size: 1.4rem;
+    color: #dc3545;
+    font-weight: 500;
+  }
+  
+  body.dark #results-msg {
+    color: #ff4d4d;
+  }
+  
+  #winner-msg {
+    font-size: 2rem;
+    color: #007bff;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  body.dark #winner-msg {
+    color: #4e8ef7;
+  }
+  
+  #reset-game-btn {
+    display: none;
+    background-color: #ffc107;
+    color: #343a40;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    width: 200px;
+    text-align: center
+  }
+  
+  body.dark #reset-game-btn {
+    background-color: #f1c232;
+    color: #121212;
+  }
+  
+  #reset-game-btn:hover {
+    background-color: #e0a800;
+  }
+  
+  .theme-toggle-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: 2px solid #343a40;
+    color: #343a40;
+    font-size: 0.75rem;
+    cursor: pointer;
+    width: 60px; 
+    height: 60px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: color 0.3s ease, border 0.3s ease, background-color 0.3s ease;
+  }
+  
+  body.dark .theme-toggle-btn {
+    color: #e0e0e0;
+    border-color: #e0e0e0;
+  }
+  
+  body.dark .theme-toggle-btn:hover {
+    background-color: #444; 
+  }
+  
+  body.light .theme-toggle-btn:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .theme-toggle-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .btn-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .btn {
+      width: 100px;
+      height: 100px;
+      font-size: 1.2rem;
+    }
+  
+    .score-container {
+      gap: 20px;
+    }
+  
+    #reset-game-btn {
+      width: 150px;
+    }
+  }
+  
